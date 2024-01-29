@@ -1,11 +1,8 @@
 body{
     background: white;
-
-
 }
 
 .container{
-
     background: yellow;
     border: thin solid red;
     display: flex;
@@ -14,6 +11,7 @@ body{
     /*justify-content: space-around;*/
     align-items: stretch;
 }
+
 #div1{
     width: 40vw;
     min-width: 200px;
@@ -28,27 +26,6 @@ body{
     border: thin solid red;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(10, 0.5vw); /* Adjust as needed */
-    grid-template-rows: repeat(20, 1vh); /* Adjust as needed */
-    /*gap: 1vh; /* Adjust gap between blocks */
-
-    width: 8%; /* reszies the width of the grid element. So make it match the vw of grid-template-columns ideally. Now learn to change that depending on device screen. */
-    height: 100%;
-    margin-left: 1%;
-    border: 0.0005vb solid white;
-  }
-  
-  .grid div {
-    width: 100%;
-    height: 100%;
-    /* Adjust other styles like borders, etc. */
-    border: 0.00005vb solid black;
-  }
-
-
-
 /*flexgrid is the name of a div element. It acts as a flexbox container, with the flexgrid div elements inside it acting
 as flex items. There is no need to state this in ".flexgrid div" as it automatically inherits this property from it's parent.  */
 .flexgrid{
@@ -62,17 +39,36 @@ as flex items. There is no need to state this in ".flexgrid div" as it automatic
     flex-wrap:wrap;
     }
 /*The flexgrid div below is used to stylise all div elements within the class: "flexgrid" */
-
 .flexgrid div{
     width: 10%;
-    height: 5%;
-    background-color: white;
+    height: 2.5%;
+    
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /*images/keffords_removals.png */
-    background-image: url(images_copy/cardboard_box.png);
+    background-image: url(images_copy/Whybirds_Logo_Vertical.png); 
 }
+.base_block{
+    width: 10%;
+    height: 4.5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(images_copy/cardboard_box.png) 
+
+
+}
+
+/*STUCK ON THIS. Not sure why this is being overwritten by flexgrid when image or background-ciolor is written.
+But also when not written,  */
+body.flexgrid.tetromino div {
+    width: 10%;
+    height: 2.5%;
+    background-color: blue !important;
+}
+
+
+
 @media all and (max-width: 500px) {
 
     .container{
@@ -85,5 +81,3 @@ as flex items. There is no need to state this in ".flexgrid div" as it automatic
         background: green;
     }
 }
-
-
