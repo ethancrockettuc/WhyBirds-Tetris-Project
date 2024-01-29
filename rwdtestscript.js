@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = createGrid();
 
 
-  //let squares = Array.from(grid.querySelectorAll('div')) //used to be querySelectorAll. Not sure why that didnt work.
+  //let squares = Array.from(document.querySelector(".flexgrid").querySelectorAll('div')) is used to find the array list of individual div elements inside the class flexgrid.
   let nodesquares = document.querySelector(".grid").querySelectorAll("div"); 
   let arraysquares = Array.from(nodesquares);
 
