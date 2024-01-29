@@ -4,13 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const GRID_HEIGHT_NUM = 20
 
   const GRID_SIZE = GRID_WIDTH_NUM * GRID_HEIGHT_NUM
-  const colors = [ //Make sure why this is needed
-  'url(images/blue_block.png)',
-  'url(images/pink_block.png)',
-  'url(images/purple_block.png)',
-  'url(images/peach_block.png)',
-  'url(images/yellow_block.png)']
-
   const flexgrid = createGrid();
 
   //let squares = Array.from(document.querySelector(".flexgrid).querySelectorAll('div')) //used to be querySelectorAll. Not sure why that didnt work.
@@ -29,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let gridElement = document.createElement("div")
       gridElement.className= "base_block"
       //gridElement.setAttribute("class", "base_block")
-      flexgrid.appendChild(gridElement) //Before gridElement gets class block3. 
+      flexgrid.appendChild(gridElement)
     }
     return flexgrid;
 }
@@ -102,18 +95,16 @@ draw();
 }
 )
 
-//counting amount of row and columns in flexbox using js.
-//.forEach() method basically iterates through entire array and applies logic to it
-//So, the three parameters used by the forEach() method are:
 
-/*
-The current element being processed.
-The index of the current element in the array.
-(Optional) The array that forEach() is being applied to.
-*/
 
 
 /*
+Down bleow are just further comments, for extra functions/features to add later on. Dont worry about it
+
+
+
+
+
 For anyone who wants LAST SECOND movement just before the piece stops, to slide it in a free space to the left or right - you can change the code to this: 
 
   //move down function
